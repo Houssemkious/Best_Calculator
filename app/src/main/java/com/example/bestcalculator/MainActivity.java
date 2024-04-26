@@ -1,8 +1,13 @@
 package com.example.bestcalculator;
 
+import android.content.res.Configuration;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +38,22 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            Window window = getWindow();
+            WindowManager.LayoutParams layoutParams = window.getAttributes();
+            layoutParams.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+            window.setAttributes(layoutParams);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (isDarkTheme()) {
+                getWindow().setStatusBarColor(Color.BLACK);
+            } else {
+                getWindow().setStatusBarColor(Color.WHITE);
+            }
+        }
+
+
 
         number1 = findViewById(R.id.number1);
         number2 = findViewById(R.id.number2);
@@ -90,6 +111,23 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    private boolean isDarkTheme() {
+        int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        switch (currentNightMode) {
+            case Configuration.UI_MODE_NIGHT_NO:
+                // Night mode is not active, assume light theme
+                return false;
+            case Configuration.UI_MODE_NIGHT_YES:
+                // Night mode is active, assume dark theme
+                return true;
+            default:
+                // Assume light theme if night mode cannot be determined
+                return false;
+        }
+    }
+
 
 
     void numbers(View view){

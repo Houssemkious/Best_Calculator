@@ -63,9 +63,6 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:layout_gravity="center"
-
-
-        
         >
         <TextView
             android:id="@+id/clear"
