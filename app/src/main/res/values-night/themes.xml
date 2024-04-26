@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BestCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+
+    <style name="Operator_Style">
+        <item name="android:textColor">@color/dark_operator_text_color</item>
+
+    </style>
+
+    <style name="Number_Style">
+        <item name="android:textColor">@color/dark_number_text_color</item>
+
+    </style>
+
+    <style name="background_Style">
+        <item name="android:background">@color/dark_background</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+
+
+
+    <color name="stroke_color">#6D590A</color>
+    <color name="pressed_color">#888888</color>
+    <color name="hover_color">#999999</color>
+    <color name="default_color">#000000</color>
+
+</resources>

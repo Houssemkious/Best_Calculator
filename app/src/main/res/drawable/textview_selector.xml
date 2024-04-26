@@ -1,0 +1,38 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <!-- Background color when pressed -->
+            <solid android:color="@color/pressed_color" />
+            <!-- Stroke color and width -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/stroke_color" />
+            <!-- Add other attributes for pressed state -->
+        </shape>
+    </item>
+    <!-- Hover state -->
+    <item android:state_hovered="true">
+        <shape android:shape="oval">
+            <!-- Background color when hovered -->
+            <solid android:color="@color/hover_color" />
+            <!-- Stroke color and width -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/stroke_color" />
+            <!-- Add other attributes for hover state -->
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <!-- Background color when not pressed or hovered -->
+            <solid android:color="@color/default_color" />
+            <!-- Stroke color and width -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/stroke_color" />
+            <!-- Add other attributes for default state -->
+        </shape>
+    </item>
+</selector>

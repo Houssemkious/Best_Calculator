@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BestCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.BestCalculator" parent="Base.Theme.BestCalculator" />
+
+    <style name="Operator_Style">
+        <item name="android:textColor">@color/light_operator_text_color</item>
+
+    </style>
+
+    <style name="Number_Style">
+        <item name="android:textColor">@color/light_number_text_color</item>
+
+    </style>
+
+    <style name="background_Style">
+        <item name="android:background">@color/light_background</item>
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+
+
+    <color name="stroke_color">#000000</color>
+    <color name="pressed_color">#CCCCCC</color>
+    <color name="hover_color">#DDDDDD</color>
+    <color name="default_color">#FFFFFF</color>
+
+
+</resources>
